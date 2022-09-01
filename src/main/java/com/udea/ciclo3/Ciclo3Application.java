@@ -1,5 +1,6 @@
 package com.udea.ciclo3;
 
+import com.udea.ciclo3.dominio.Empresa;
 import net.minidev.json.JSONUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,6 +22,17 @@ public class Ciclo3Application {
     public static void main(String[] args) {
         SpringApplication.run(Ciclo3Application.class, args);
         System.out.println("Hola mundo nuevo hoy actualizacion");
+        Empresa emp = new Empresa("Casa Villa","calle 35#3-55","3205669877","893652221");
+        emp.setNombre("Casa Cuervo");
+        System.out.println(emp.toString());
+
+    }
+
+    @GetMapping("/test")
+    public String test() {
+        Empresa emp = new Empresa("Casa Villa","calle 35#3-55","3205669877","893652221");
+        emp.setNombre("Casa Cuervo");
+        return emp.toString();
     }
 
 
