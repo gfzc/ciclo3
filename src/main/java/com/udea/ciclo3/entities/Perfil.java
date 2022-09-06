@@ -1,4 +1,4 @@
-package com.udea.ciclo3.dominio;
+package com.udea.ciclo3.entities;
 
 import javax.persistence.*;
 import java.util.Date;

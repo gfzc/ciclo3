@@ -1,4 +1,4 @@
-package com.udea.ciclo3.dominio;
+package com.udea.ciclo3.entities;
 
 public enum EnumRole {
     Admin, Operario
