@@ -41,7 +41,7 @@ public class Empresa {
     }
 
     public Empresa(Long idEmpresa, String nombre, String nit, String direccion, String telefono, Date fechaCreacion, Date fechaActualizacion, List<Empleado> empleado, List<Transaccion> transacciones) {
-        this.idEmpresa = idEmpresa;
+        this.idEmpresa = this.idEmpresa;
         this.nombre = nombre;
         this.nit = nit;
         this.direccion = direccion;
@@ -56,8 +56,8 @@ public class Empresa {
         return idEmpresa;
     }
 
-    public void setIdEmpresa(Long idEmpresa) {
-        this.idEmpresa = idEmpresa;
+    public void setIdEmpresa(Long id) {
+        this.idEmpresa = this.idEmpresa;
     }
 
     public String getNombre() {

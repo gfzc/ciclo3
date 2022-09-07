@@ -11,8 +11,8 @@ import java.util.List;
 @Service
 public class EmpresaService {
 
-    @Autowired //conecta la clase con el repository de empresa
-    EmpresaRepository empresaRepository; //Crea objeto de tipo empresaRepository para usar metodos
+    @Autowired //conecta la clase con el repository de Empresa
+    EmpresaRepository empresaRepository; //Crea objeto de tipo empresaRepository para usar los metodos de dicha clase
 
     //Metodo que retorna lista de empresas con metodos heredados del jpa Repository
     public List<Empresa> getAllEmpresas(){
@@ -35,9 +35,13 @@ public class EmpresaService {
                 return true;
             }
             return false;
-
     }
-
     //Metodo para eliminar objetos de tipo Empresa
-
+    public boolean deleteEmpresa(Long id){
+        empresaRepository.deleteById(id);
+        if (getEmpresaById(id)!=null){
+            return false;
+        }
+        return true;
+    }
 }
