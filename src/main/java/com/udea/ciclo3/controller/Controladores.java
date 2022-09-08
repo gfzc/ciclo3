@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -38,10 +39,16 @@ public class Controladores {
             return "redirect:/VerEmpresas";
         }
         return "redirect:/AgregarEmpresa";
+    }
+
+    @GetMapping("/EditarEmpresa")
+    public String editEmpresa(Model model, @PathVariable Long id){
+        Empresa editEmp = empresaService.getEmpresaById(id);
+        model.addAttribute("editEmp", editEmp);
+        return "editarEmpresa";
 
 
     }
-
 
 
 
