@@ -24,7 +24,7 @@
     <h1>Ingrese Los Datos</h1>
     <!--Crea formulario para llenar datos de Empresa y los guarda en el objeto emp -->
     <br>
-    <form th:action="@{/GuardarEmpresa}" th:object="${newEmpn}" method="post">
+    <form th:action="@{/GuardarEmpresa}" th:object="${nuevaEmp}" method="post">
         <!--Campo para nombre -->
         <div class="row">
             <div class="form-group col-md-12">
@@ -73,6 +73,16 @@
                 </div>
             </div>
         </div>
+
+        <!--Campo para fechaActualizacion -->
+       <!-- <div class="row">
+            <div class="form-group col-md-12">
+                <label class="col-md-3" for="fechaActualizacion">Fecha Actualizacion de la Empresa:</label>
+                <div class="col-md-6">
+                    <input type="tex" th:field="*{fechaActualizacion}" class="form-control" id="fechaActualizacion" required="required">
+                </div>
+            </div>
+        </div>-->
 
         <!--Crear boton que envia todo y termina-->
         <div class="row">
