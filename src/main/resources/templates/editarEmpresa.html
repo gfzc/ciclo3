@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>Agregar Empresas</title>
+  <title>Edite Aquí Empresas</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -24,7 +24,18 @@
   <h1>Ingrese Los Datos</h1>
   <!--Crea formulario para llenar datos de Empresa y los guarda en el objeto emp -->
   <br>
-  <form th:action="@{/GuardarEmpresa}" th:object="${newEmpn}" method="post">
+  <form th:action="@{/ActualizarEmpresa}" th:object="${editEmp}" method="post">
+
+     <!--Campo para id -->
+    <div class="row">
+      <div class="form-group col-md-12">
+        <label class="col-md-3" for="id">ID de la Empresa:</label>
+        <div class="col-md-6">
+          <input type="hidden" th:field="*{idEmpresa}" class="form-control" id="id" required="required">
+        </div>
+      </div>
+    </div>
+
     <!--Campo para nombre -->
     <div class="row">
       <div class="form-group col-md-12">
